@@ -1,0 +1,19 @@
+name: Build and Release
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubicloud-standard-2
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v4
+
+    # Добавьте другие шаги, необходимые для вашего проекта
